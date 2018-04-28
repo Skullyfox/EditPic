@@ -60,9 +60,12 @@ form {
       .container .toolPicker div:hover {
         -webkit-filter: brightness(130%);
                 filter: brightness(130%); }
-        .container .toolPicker div:hover p, .container .toolPicker div:hover i {
+        .container .toolPicker div:hover p {
           -webkit-transform: scale(1.2);
                   transform: scale(1.2); }
+        .container .toolPicker div:hover i {
+          -webkit-transform: scale(1.2) rotateY(180deg);
+                  transform: scale(1.2) rotateY(180deg); }
       .container .toolPicker div i {
         color: #102027;
         font-size: 25px;
