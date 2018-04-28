@@ -1,9 +1,3 @@
-@media screen and (max-width: 500px) {
-  .container .toolPicker {
-    width: 100% !important; }
-  .container .menuTogglerOn {
-    left: 100% !important; } }
-
 body {
   display: flex;
   flex-direction: column;
@@ -194,5 +188,11 @@ form {
 
 ::-webkit-scrollbar-track-piece {
   background-color: rgba(224, 224, 224, 0.3); }
+
+@media screen and (max-width: 500px) {
+  .container .toolPicker {
+    width: 100% !important; }
+  .container .menuTogglerOn {
+    display: none !important; } }
 
 /*# sourceMappingURL=style.css.map */
