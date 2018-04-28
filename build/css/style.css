@@ -50,12 +50,27 @@ form {
     transition: transform 1s, -webkit-transform 1s;
     border-right: 1px solid rgba(98, 114, 123, 0.5); }
     .container .toolPicker div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 20vh;
       transition: all 0.5s; }
       .container .toolPicker div:hover {
         -webkit-filter: brightness(130%);
                 filter: brightness(130%); }
+        .container .toolPicker div:hover p, .container .toolPicker div:hover i {
+          -webkit-transform: scale(1.2);
+                  transform: scale(1.2); }
+      .container .toolPicker div i {
+        color: #102027;
+        font-size: 25px;
+        transition: all 0.5s; }
+      .container .toolPicker div p {
+        transition: all 0.5s;
+        padding: 0;
+        margin: 0; }
     .container .toolPicker hr {
       margin: 0;
       opacity: 0.5; }

@@ -14,12 +14,29 @@
         border-right: 1px solid rgba($primaryColor-l,0.5)
 
         div
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
             width: 100%
             height: 20vh
             transition: all 0.5s
 
             &:hover
                 filter: brightness(130%)
+
+                p,i
+                    transform: scale(1.2)
+
+            i
+                color: $primaryColor-d
+                font-size: 25px
+                transition: all 0.5s
+            
+            p
+                transition: all 0.5s
+                padding: 0
+                margin: 0
                 
         hr
             margin: 0
