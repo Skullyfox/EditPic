@@ -8,7 +8,7 @@ body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background-color: #37474f; }
+  background: linear-gradient(45deg, #37474f 0%, #1976d2 350%); }
   body * {
     font-family: 'Tajawal', sans-serif;
     box-sizing: border-box; }
