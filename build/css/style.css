@@ -7,6 +7,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100%;
+  overflow: hidden;
   background-color: #37474f; }
   body * {
     font-family: 'Tajawal', sans-serif;
@@ -48,6 +49,16 @@ form {
     transition: transform 1s;
     transition: transform 1s, -webkit-transform 1s;
     border-right: 1px solid rgba(98, 114, 123, 0.5); }
+    .container .toolPicker div {
+      width: 100%;
+      height: 20vh;
+      transition: all 0.5s; }
+      .container .toolPicker div:hover {
+        -webkit-filter: brightness(130%);
+                filter: brightness(130%); }
+    .container .toolPicker hr {
+      margin: 0;
+      opacity: 0.5; }
   .container .menuToggle {
     display: flex;
     flex-direction: column;
@@ -97,5 +108,53 @@ form {
     color: #62727b;
     -webkit-transform: scale(1.2) rotate(0deg);
             transform: scale(1.2) rotate(0deg); }
+
+.red {
+  color: #d32f2f; }
+
+.pink {
+  background-color: #c2185b; }
+
+.purple {
+  background-color: #7b1fa2; }
+
+.deep-purple {
+  background-color: #512da8; }
+
+.indigo {
+  background-color: #303f9f; }
+
+.blue {
+  background-color: #1976d2; }
+
+.light-blue {
+  background-color: #0288d1; }
+
+.cyan {
+  background-color: #0097a7; }
+
+.teal {
+  background-color: #00796b; }
+
+.green {
+  background-color: #388e3c; }
+
+.light-green {
+  background-color: #689f38; }
+
+.lime {
+  background-color: #afb42b; }
+
+.yellow {
+  background-color: #fbc02d; }
+
+.amber {
+  background-color: #ffa000; }
+
+.orange {
+  background-color: #f57c00; }
+
+.deep-orange {
+  background-color: #e64a19; }
 
 /*# sourceMappingURL=style.css.map */
