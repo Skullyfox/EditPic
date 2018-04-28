@@ -1,0 +1,21 @@
+.menuOn
+    transform: translateX(0%)
+.menuOff
+    transform: translateX(-100%)
+.menuTogglerOn
+    left: 29%
+    i
+        transform: rotate(180deg)
+    &:hover
+            i
+                color: $primaryColor-l
+                transform: scale(1.2) rotate(180deg)
+.menuTogglerOff
+    left: -0.35%
+    i
+        transform: rotate(0deg)
+
+    &:hover
+        i
+            color: $primaryColor-l
+            transform: scale(1.2) rotate(0deg)

@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #37474f; }
+  body * {
+    font-family: 'Tajawal', sans-serif;
+    box-sizing: border-box; }
+
+form {
+  padding: 5%;
+  border-radius: 5px;
+  width: 50%;
+  text-align: center;
+  background-color: #102027;
+  box-shadow: 3px 3px 10px rgba(16, 32, 39, 0.8); }
+  form .title {
+    color: #63a4ff;
+    font-size: 30px;
+    padding: 0;
+    margin: 0px 0px 30px 0px; }
+  form .btn {
+    background-color: #1976d2; }
+  form .btn:hover {
+    background-color: #63a4ff; }
+  form .input-field input {
+    text-transform: uppercase;
+    text-align: center;
+    color: #e0e0e0; }
+
+.container {
+  height: 100%;
+  width: 100%; }
+  .container .toolPicker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #e0e0e0;
+    box-shadow: 5px 5px 5px rgba(16, 32, 39, 0.5);
+    height: 100%;
+    width: 30%;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+    border-right: 1px solid rgba(98, 114, 123, 0.5); }
+  .container .menuToggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid rgba(98, 114, 123, 0.8);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(16, 32, 39, 0.5);
+    transition: all 1s; }
+    .container .menuToggle i {
+      font-size: 25px;
+      color: #37474f;
+      transition: -webkit-transform 0.5s;
+      transition: transform 0.5s;
+      transition: transform 0.5s, -webkit-transform 0.5s; }
+
+.menuOn {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%); }
+
+.menuOff {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%); }
+
+.menuTogglerOn {
+  left: 29%; }
+  .menuTogglerOn i {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .menuTogglerOn:hover i {
+    color: #62727b;
+    -webkit-transform: scale(1.2) rotate(180deg);
+            transform: scale(1.2) rotate(180deg); }
+
+.menuTogglerOff {
+  left: -0.35%; }
+  .menuTogglerOff i {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  .menuTogglerOff:hover i {
+    color: #62727b;
+    -webkit-transform: scale(1.2) rotate(0deg);
+            transform: scale(1.2) rotate(0deg); }
+
+/*# sourceMappingURL=style.css.map */

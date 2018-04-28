@@ -1,0 +1,35 @@
+.container
+    height: 100%
+    width: 100%
+
+    .toolPicker
+        position: absolute
+        left: 0
+        top: 0
+        background-color: $accentColor-n
+        box-shadow: 5px 5px 5px rgba($primaryColor-d,0.5)
+        height: 100%
+        width: 30%
+        transition: transform 1s
+        border-right: 1px solid rgba($primaryColor-l,0.5)
+
+    .menuToggle
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 0%
+        width: 50px
+        height: 50px
+        padding: 10px
+        background-color: $accentColor-n
+        border: 1px solid rgba($primaryColor-l,0.8)
+        border-radius: 10px
+        box-shadow: 5px 5px 5px rgba($primaryColor-d,0.5)
+        transition: all 1s
+
+        i
+            font-size: 25px
+            color: $primaryColor-n
+            transition: transform 0.5s
