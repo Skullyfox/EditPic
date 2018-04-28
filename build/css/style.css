@@ -191,7 +191,8 @@ form {
 
 @media screen and (max-width: 500px) {
   .container .toolPicker {
-    width: 100% !important; }
+    width: 100% !important;
+    min-width: 100%; }
   .container .menuTogglerOn {
     display: none !important; } }
 
