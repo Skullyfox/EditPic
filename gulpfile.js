@@ -23,8 +23,14 @@ gulp.task('build-sass', () => {
 });
 
 gulp.task('concat-js', () =>{
-    return gulp.src(['src/js/**/*.js'])
+    return gulp.src(['src/js/features/*.js'])
         .pipe(concat('main.js'))
+        .pipe(gulp.dest('build/js'))
+});
+
+gulp.task('concat-vue', () =>{
+    return gulp.src(['src/js/vue/*.js'])
+        .pipe(concat('vue.js'))
         .pipe(gulp.dest('build/js'))
 });
 
@@ -36,9 +42,10 @@ gulp.task('browserSync', function(){
     })
 });
 
-gulp.task('start', ['browserSync', 'build-sass', 'concat-js'], function(){
+gulp.task('start', ['browserSync', 'build-sass', 'concat-js', 'concat-vue'], function(){
     gulp.watch('src/scss/*',['build-sass']);
-    gulp.watch('src/js/**/*.js',['concat-js'])
+    gulp.watch('src/js/features/*.js',['concat-js']);
+    gulp.watch('src/js/vue/*.js',['concat-vue']);
     gulp.watch('./*.html', browserSync.reload);
-    gulp.watch('build/js/*.js', browserSync.reload);
+    gulp.watch('build/**/*.js', browserSync.reload);
 });

@@ -34,10 +34,15 @@ form {
     text-align: center;
     color: #e0e0e0; }
 
-.container {
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%; }
-  .container .toolPicker {
+  .Container .toolPicker {
+    z-index: 1;
     position: absolute;
     left: 0;
     top: 0;
@@ -50,7 +55,8 @@ form {
     transition: transform 1s, -webkit-transform 1s;
     border-right: 1px solid rgba(98, 114, 123, 0.5);
     overflow-y: scroll; }
-    .container .toolPicker div {
+    .Container .toolPicker div {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -58,31 +64,40 @@ form {
       width: 100%;
       height: 25vh;
       transition: all 0.5s; }
-      .container .toolPicker div:hover {
+      .Container .toolPicker div:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      .Container .toolPicker div:hover {
         -webkit-filter: brightness(130%);
-                filter: brightness(130%); }
-        .container .toolPicker div:hover p {
+                filter: brightness(130%);
+        cursor: pointer; }
+        .Container .toolPicker div:hover p {
           -webkit-transform: scale(1.2);
                   transform: scale(1.2); }
-        .container .toolPicker div:hover i {
+        .Container .toolPicker div:hover i {
           -webkit-transform: scale(1.2) rotateY(360deg);
                   transform: scale(1.2) rotateY(360deg); }
-      .container .toolPicker div i {
+      .Container .toolPicker div i {
         color: #102027;
         font-size: 25px;
         transition: all 0.5s; }
-      .container .toolPicker div p {
+      .Container .toolPicker div p {
         transition: all 0.5s;
         padding: 0;
         margin: 0; }
-    .container .toolPicker hr {
+    .Container .toolPicker hr {
       margin: 0;
       opacity: 0.5; }
-  .container .menuToggle {
+  .Container .menuToggle {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
     position: absolute;
     top: 0%;
     width: 50px;
@@ -93,12 +108,98 @@ form {
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(16, 32, 39, 0.5);
     transition: all 1s; }
-    .container .menuToggle i {
+    .Container .menuToggle i {
       font-size: 25px;
       color: #37474f;
       transition: -webkit-transform 0.5s;
       transition: transform 0.5s;
       transition: transform 0.5s, -webkit-transform 0.5s; }
+  .Container .appContent {
+    position: relative;
+    height: 91%;
+    width: 91%;
+    border: 1px solid #102027; }
+    .Container .appContent .uploadPic {
+      background-color: rgba(2, 136, 209, 0.8);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: columns;
+      justify-content: center;
+      align-items: center; }
+      .Container .appContent .uploadPic i {
+        color: #102027;
+        font-size: 25px;
+        transition: all 0.5s; }
+      .Container .appContent .uploadPic p {
+        transition: all 0.5s;
+        padding: 0;
+        margin: 0; }
+    .Container .appContent .resizePic {
+      background-color: rgba(0, 121, 107, 0.8);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: columns;
+      justify-content: center;
+      align-items: center; }
+      .Container .appContent .resizePic i {
+        color: #102027;
+        font-size: 25px;
+        transition: all 0.5s; }
+      .Container .appContent .resizePic p {
+        transition: all 0.5s;
+        padding: 0;
+        margin: 0; }
+    .Container .appContent .filterPic {
+      background-color: rgba(104, 159, 56, 0.8);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: columns;
+      justify-content: center;
+      align-items: center; }
+      .Container .appContent .filterPic i {
+        color: #102027;
+        font-size: 25px;
+        transition: all 0.5s; }
+      .Container .appContent .filterPic p {
+        transition: all 0.5s;
+        padding: 0;
+        margin: 0; }
+    .Container .appContent .changeAfterDotPic {
+      background-color: rgba(251, 192, 45, 0.8);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: columns;
+      justify-content: center;
+      align-items: center; }
+      .Container .appContent .changeAfterDotPic i {
+        color: #102027;
+        font-size: 25px;
+        transition: all 0.5s; }
+      .Container .appContent .changeAfterDotPic p {
+        transition: all 0.5s;
+        padding: 0;
+        margin: 0; }
+    .Container .appContent .downloadPic {
+      position: relative;
+      background-color: rgba(245, 124, 0, 0.8);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: columns;
+      justify-content: center;
+      align-items: center; }
+      .Container .appContent .downloadPic i {
+        color: #102027;
+        font-size: 25px;
+        transition: all 0.5s; }
+      .Container .appContent .downloadPic p {
+        transition: all 0.5s;
+        padding: 0;
+        margin: 0; }
 
 .menuOn {
   -webkit-transform: translateX(0%);

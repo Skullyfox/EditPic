@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Projet</title>
+    <title>EditPic || Application</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
                                         <!-- MATERIALIZE -->
@@ -21,40 +21,71 @@
 
                                         <!-- PERSONNAL LINK -->
     <link rel="stylesheet" type="text/css" media="screen" href="build/css/style.css" />
+
+                                        <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
 </head>
 <body>
     
-    <div class="container">
+    <div class="Container" id="app">
+
+        <!-- Menu -->
+
         <div class="toolPicker menuOff">
-            <div class="light-blue">
+            <div class="light-blue" data-setview="uploadPic" v-on:click="setSeen">
                 <i class="fas fa-upload"></i>
                 <p>Upload your picture</p>
             </div>
-            <div class="teal">
+            <div class="teal" data-setview="filterPic" v-on:click="setSeen">
                 <i class="fas fa-expand-arrows-alt"></i>
                 <p>Resize</p>
             </div>
-            <div class="light-green">
+            <div class="light-green" data-setview="filterPic" v-on:click="setSeen">
                 <i class="fas fa-magic"></i>
                 <p>Filter</p>
             </div>
-            <div class="yellow">
+            <div class="yellow" data-setview="changeAfterDotPic" v-on:click="setSeen">
                 <i class="far fa-image"></i>
                 <p>Change Extension</p>
             </div>
-            <div class="orange">
+            <div class="orange" data-setview="downloadPic" v-on:click="setSeen">
                 <i class="fas fa-download"></i>
                 <p>Download your picture</p>
             </div>
+
         </div>
+
+                    <!-- Menu Button -->
+
         <div class="menuToggle menuTogglerOff">
             <i class="fas fa-angle-double-right"></i>
+        </div>
+
+        <!-- AppContent -->
+
+        <div class="appContent">
+
+            <uploadpic v-if="uploadPic"></uploadpic>
+
+            <resizepic v-if="resizePic"></resizepic>
+
+            <filterpic v-if="filterPic"></filterpic>
+
+            <changeafterdotpic v-if="changeAfterDotPic"></changeafterdotpic>
+
+            <downloadpic v-if="downloadPic"></downloadpic>
+
         </div>
         
     </div>
 
-    <script src="image.js"></script>
+                            <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="build/js/image.js"></script>
+    <script src="build/js/vue.js"></script>
     <script src="build/js/main.js"></script>
+
 </body>
 </html>
