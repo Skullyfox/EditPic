@@ -59,7 +59,7 @@ var app = new Vue({
     methods: {
         setSeen: (e) => {
 
-            var target  = e.target.dataset.setview;
+            var targetData  = e.target.dataset.setview;
 
             const   dataArray = [
                 'uploadPic',
