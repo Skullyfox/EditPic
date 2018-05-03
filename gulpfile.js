@@ -29,7 +29,7 @@ gulp.task('concat-js', () =>{
 });
 
 gulp.task('concat-vue', () =>{
-    return gulp.src(['src/js/vue/*.js'])
+    return gulp.src(['src/js/vue/**/*.js'])
         .pipe(concat('vue.js'))
         .pipe(gulp.dest('build/js'))
 });
@@ -45,7 +45,9 @@ gulp.task('browserSync', function(){
 gulp.task('start', ['browserSync', 'build-sass', 'concat-js', 'concat-vue'], function(){
     gulp.watch('src/scss/*',['build-sass']);
     gulp.watch('src/js/features/*.js',['concat-js']);
-    gulp.watch('src/js/vue/*.js',['concat-vue']);
+    gulp.watch('src/js/vue/**/*.js',['concat-vue']);
     gulp.watch('./*.html', browserSync.reload);
+    gulp.watch('./src/**/*.js', browserSync.reload);
     gulp.watch('build/**/*.js', browserSync.reload);
+    gulp.watch('build/**/*.css', browserSync.reload);
 });

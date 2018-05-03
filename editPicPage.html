@@ -11,17 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
-    <!-- PERSONNAL LINK -->
-    <link rel="stylesheet" type="text/css" media="screen" href="build/css/style.css" />
-    
     <!-- FONTS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
-
                                         <!-- PERSONNAL LINK -->
     <link rel="stylesheet" type="text/css" media="screen" href="build/css/style.css" />
-
                                         <!-- VueJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
@@ -37,7 +31,7 @@
                 <i class="fas fa-upload"></i>
                 <p>Upload your picture</p>
             </div>
-            <div class="teal" data-setview="filterPic" v-on:click="setSeen">
+            <div class="teal" data-setview="resizePic" v-on:click="setSeen">
                 <i class="fas fa-expand-arrows-alt"></i>
                 <p>Resize</p>
             </div>
@@ -66,24 +60,22 @@
 
         <div class="appContent">
 
-            <uploadpic v-if="uploadPic"></uploadpic>
+            <uploadpic v-show="targetData == 'uploadPic'" v-on:upload-file="upload"></uploadpic>
 
-            <resizepic v-if="resizePic"></resizepic>
+            <resizepic v-show="targetData == 'resizePic'"></resizepic>
 
-            <filterpic v-if="filterPic"></filterpic>
+            <filterpic v-show="targetData == 'filterPic'"></filterpic>
 
-            <changeafterdotpic v-if="changeAfterDotPic"></changeafterdotpic>
+            <changeafterdotpic v-show="targetData == 'changeAfterDotPic'"></changeafterdotpic>
 
-            <downloadpic v-if="downloadPic"></downloadpic>
+            <downloadpic v-show="targetData == 'downloadPic'"></downloadpic>
 
         </div>
         
     </div>
 
                             <!-- VueJS -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-    <script src="build/js/image.js"></script>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
     <script src="build/js/vue.js"></script>
     <script src="build/js/main.js"></script>
 

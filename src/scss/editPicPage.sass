@@ -94,39 +94,73 @@
             width: 100%
 
             display: flex
-            flex-direction: columns
+            flex-direction: column
             justify-content: center
             align-items: center
             
             i
                 color: $primaryColor-d
-                font-size: 25px
+                font-size: 35px
                 transition: all 0.5s
+                margin: 15px
             
             p
                 transition: all 0.5s
                 padding: 0
                 margin: 0
+                font-size: 18px
+                cursor: default
+            
+            #uploadFile
+                display: none
+
+            #label-uploadFile
+                cursor: pointer
+                padding: 0
+                margin: 0
+                border: 2px dashed rgba($primaryColor-n, 0.3)
+                transition: border 0.5s
+
+                &:hover
+                    border: 2px dashed rgba($accentColor-d, 0.8)
+                    i
+                        color: $accentColor-l
 
         .resizePic
+            position: relative
             background-color: rgba($teal,0.8)
             height: 100%
             width: 100%
 
-            display: flex
-            flex-direction: columns
-            justify-content: center
-            align-items: center
-            
-            i
-                color: $primaryColor-d
-                font-size: 25px
-                transition: all 0.5s
-            
-            p
-                transition: all 0.5s
-                padding: 0
-                margin: 0
+            display: grid
+            grid-template-columns: 1fr 1fr
+
+            .resizeOpt
+                height: 100%
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-items: center
+                i
+                    color: $primaryColor-d
+                    font-size: 25px
+                    transition: all 0.5s
+                
+                p
+                    transition: all 0.5s
+                    padding: 0
+                    margin: 0
+
+            .resizeLiveView
+                height: 100%
+                display: flex
+                flex-direction: row
+                justify-content: center
+                align-items: center
+                padding: 5%
+                .canvasShowPic
+                    max-height: 100%
+                    max-width: 100%
             
         .filterPic
             background-color: rgba($light-green,0.8)
