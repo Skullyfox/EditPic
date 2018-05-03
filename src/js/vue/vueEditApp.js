@@ -2,13 +2,17 @@ Vue.component(
     'uploadpic', {
         template: `
             <div class="uploadPic">
-                <i class="fas fa-upload"></i>
-                <p>Upload your picture</p>
+                <p> Upload your Pic here ! </p>
+                <label for='uploadFile' id='label-uploadFile'>
+                    <i class="fas fa-upload"></i>
+                </label>
+                <input type='file' id='uploadFile'/>
             </div>
         `
     })
 Vue.component(
     'resizepic', {
+        props: [''],
         template: `
             <div class="resizePic">
                 <i class="fas fa-expand-arrows-alt"></i>
@@ -49,19 +53,19 @@ var app = new Vue({
     el: '#app',
 
     data: {
-      uploadPic: true,
-      resizePic: false,
-      filterPic: false,
-      changeAfterDotPic: false,
-      downloadPic: false
+        uploadPic: true,
+        resizePic: false,
+        filterPic: false,
+        changeAfterDotPic: false,
+        downloadPic: false,
     },
 
     methods: {
         setSeen: (e) => {
 
-            var targetData  = e.target.dataset.setview;
+            var targetData = e.target.dataset.setview;
 
-            const   dataArray = [
+            const dataArray = [
                 'uploadPic',
                 'resizePic',
                 'filterPic',
@@ -70,18 +74,49 @@ var app = new Vue({
             ];
 
 
-            for (var i = 0 ; i < dataArray.length ; i++){
-                if( target == dataArray[i] ){
-                    app._data.dataArray[i] = true;
+            for (var i = 0; i < dataArray.length; i++) {
+                if (targetData == dataArray[i]) {
+                    switch (i) {
+                        case 0:
+                            app._data.uploadPic = true;
+                            break;
+                        case 1:
+                            app._data.resizePic = true;
+                            break;
+                        case 2:
+                            app._data.filterPic = true;
+                            break;
+                        case 3:
+                            app._data.changeAfterDotPic = true;
+                            break;
+                        case 4:
+                            app._data.downloadPic = true;
+                            break;
+                    }
                 } else {
-                    app._data.dataArray[i] = false;
+                    switch (i) {
+                        case 0:
+                            app._data.uploadPic = false;
+                            break;
+                        case 1:
+                            app._data.resizePic = false;
+                            break;
+                        case 2:
+                            app._data.filterPic = false;
+                            break;
+                        case 3:
+                            app._data.changeAfterDotPic = false;
+                            break;
+                        case 4:
+                            app._data.downloadPic = false;
+                            break;
+                    }
                 }
             }
+        },
 
-            console.log(e.target.dataset.setview)
-            console.log(dataArray[0])
-            console.log(target == dataArray[0])
-        }
+        debugThis: (e) => {
+            console.log(e.target)
+        },
     }
-    
-  })
+})
