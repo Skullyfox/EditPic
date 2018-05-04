@@ -180,6 +180,8 @@ form {
         .Container .appContent .resizePic .resizeOpt .button {
           z-index: 0;
           border-radius: 10px;
+          width: 80%;
+          padding: 0;
           background-color: #00796b;
           -webkit-filter: brightness(120%);
                   filter: brightness(120%); }
