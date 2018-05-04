@@ -181,6 +181,7 @@ form {
           z-index: 0;
           border-radius: 10px;
           width: 80%;
+          height: auto;
           padding: 0;
           background-color: #00796b;
           -webkit-filter: brightness(120%);
