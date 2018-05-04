@@ -132,34 +132,70 @@
             height: 100%
             width: 100%
 
-            display: grid
-            grid-template-columns: 1fr 1fr
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
 
             .resizeOpt
                 min-height: 100%
                 max-height: 100%
+                padding: 2%
+                width: 35%
                 display: flex
-                flex-direction: row
+                flex-direction: column
                 justify-content: center
                 align-items: center
+
                 i
                     color: $primaryColor-d
-                    font-size: 25px
+                    font-size: 35px
                     transition: all 0.5s
-                
+                    margin: 0 0 5px 0
+
                 p
-                    transition: all 0.5s
                     padding: 0
-                    margin: 0
+                    margin: 0 0 5px 0
+                    font-size: 20px
+                    color: $primaryColor-d
+                
+                .button
+                    z-index: 0
+                    border-radius: 10px
+                    background-color: $teal
+                    filter: brightness(120%)
+
+                .resizeOptChoice
+                    width: 100%
+                    padding: 2%
+                    margin: 0 0 15px 0
+                    border: 2px solid rgba($accentColor-n,0.5)
+                    border-radius: 10px
+                    text-align: center
+
+                    i
+                        font-size: 20px
+                        margin: 0
+
+                    .optWidth,
+                    .optHeight
+                        input
+                            color: $accentColor-n
+                            text-align: center
+
+                        ::-webkit-inner-spin-button, 
+                        ::-webkit-outer-spin-button
+                            display: none
+
 
             .resizeLiveView
                 min-height: 100%
                 max-height: 100%
+                width: 65%
                 display: flex
                 flex-direction: row
                 justify-content: center
                 align-items: center
-                padding: 5%
+                padding: 2%
                 .canvasShowPic
                     max-height: 100%
                     max-width: 100%

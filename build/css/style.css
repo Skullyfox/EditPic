@@ -155,31 +155,62 @@ form {
       background-color: rgba(0, 121, 107, 0.8);
       height: 100%;
       width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr; }
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
       .Container .appContent .resizePic .resizeOpt {
         min-height: 100%;
         max-height: 100%;
+        padding: 2%;
+        width: 35%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center; }
         .Container .appContent .resizePic .resizeOpt i {
           color: #102027;
-          font-size: 25px;
-          transition: all 0.5s; }
-        .Container .appContent .resizePic .resizeOpt p {
+          font-size: 35px;
           transition: all 0.5s;
+          margin: 0 0 5px 0; }
+        .Container .appContent .resizePic .resizeOpt p {
           padding: 0;
-          margin: 0; }
+          margin: 0 0 5px 0;
+          font-size: 20px;
+          color: #102027; }
+        .Container .appContent .resizePic .resizeOpt .button {
+          z-index: 0;
+          border-radius: 10px;
+          background-color: #00796b;
+          -webkit-filter: brightness(120%);
+                  filter: brightness(120%); }
+        .Container .appContent .resizePic .resizeOpt .resizeOptChoice {
+          width: 100%;
+          padding: 2%;
+          margin: 0 0 15px 0;
+          border: 2px solid rgba(224, 224, 224, 0.5);
+          border-radius: 10px;
+          text-align: center; }
+          .Container .appContent .resizePic .resizeOpt .resizeOptChoice i {
+            font-size: 20px;
+            margin: 0; }
+          .Container .appContent .resizePic .resizeOpt .resizeOptChoice .optWidth input,
+          .Container .appContent .resizePic .resizeOpt .resizeOptChoice .optHeight input {
+            color: #e0e0e0;
+            text-align: center; }
+          .Container .appContent .resizePic .resizeOpt .resizeOptChoice .optWidth ::-webkit-inner-spin-button,
+          .Container .appContent .resizePic .resizeOpt .resizeOptChoice .optWidth ::-webkit-outer-spin-button,
+          .Container .appContent .resizePic .resizeOpt .resizeOptChoice .optHeight ::-webkit-inner-spin-button,
+          .Container .appContent .resizePic .resizeOpt .resizeOptChoice .optHeight ::-webkit-outer-spin-button {
+            display: none; }
       .Container .appContent .resizePic .resizeLiveView {
         min-height: 100%;
         max-height: 100%;
+        width: 65%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 5%; }
+        padding: 2%; }
         .Container .appContent .resizePic .resizeLiveView .canvasShowPic {
           max-height: 100%;
           max-width: 100%; }
@@ -328,5 +359,9 @@ form {
     min-width: 100%; }
   .container .menuTogglerOn {
     display: none !important; } }
+
+@media screen and (max-width: 800px) and (min-width: 500px) {
+  .container .toolPicker {
+    min-height: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
